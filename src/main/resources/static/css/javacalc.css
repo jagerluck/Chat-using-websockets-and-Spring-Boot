@@ -1,0 +1,165 @@
+:root {
+  --calculator-field-height: 50px;
+}
+
+/* colors */
+.inverse-colors {
+  color: lightgrey;
+  background-color: brown;
+}
+.normal-colors {
+  color: brown;
+  background-color: rgb(240, 240, 240);
+}
+.just-bg-color {
+  background-color: rgb(240, 240, 240);
+}
+#change-color-icon {
+  line-height: 2rem;
+  text-align: center;
+  color: gold;
+}
+/* ------------------------- */
+
+.calculator-container {
+  align-content: center;
+  position: relative;
+  width: fit-content;
+  padding: 0 0 1rem 0;
+  margin: 2rem auto;
+  border-radius: 3px;
+  color: brown;
+  box-shadow: 0px 10px 25px rgba(153, 153, 153, 0.534);
+}
+
+.calculator-title-big {
+  border-radius: 3px;
+  line-height: 6rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.calculator-title-small {
+  line-height: 1.5rem;
+  margin: .5rem auto 0 auto;
+  text-align: center;
+}
+
+.calculator-inputs {
+  padding: 0 5rem;
+}
+
+.calculator-days,
+.calculator-months,
+.calculator-years {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ctrl {
+  display: flex; 
+  border: solid 1px rgb(243, 226, 226);
+  border-radius: 5px;
+  width: 200px;
+  height: var(--calculator-field-height);
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.ctrl__button {
+  /* to keep it square */
+  width: var(--calculator-field-height);
+  font-size: 1.3rem;
+  line-height: var(--calculator-field-height);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:hover {
+  background-color: #90a2b0;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:active {
+  background-color: #778996;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button--decrement { 
+  border-radius: 5px 0 0 5px; 
+}
+.ctrl__button--increment { 
+  border-radius: 0 5px 5px 0; 
+}
+
+.ctrl__counter-num {
+  z-index: 1;
+  width: 100px;
+  line-height: normal;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  line-height: var(--calculator-field-height);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+
+#count-btn {
+  display: block;
+  height: 50px;
+  filter: brightness(.75);
+  margin: 2rem auto;
+}
+
+#count-btn:hover {
+  cursor: pointer;
+  filter: brightness(1);
+  transition: filter .5s ease-in-out;
+}
+
+#count-btn:active {
+  transform: scale(.94);
+}
+
+.calculator-response {
+    width: 300px;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 3rem 4rem 3rem;
+}
+
+.calculator-footer {
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  border-radius: 3px;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.calculator-colors {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  line-height: 3rem;
+  width: 3rem;
+}
+
+#change-color-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+#change-color-icon:active {
+  transform: scale(.3);
+}

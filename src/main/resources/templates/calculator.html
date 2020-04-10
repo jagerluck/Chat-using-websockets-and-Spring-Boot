@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Calculator</title>
+  <!-- /css/javacalc.css -->
+  <link href="/css/javacalc.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="calculator-container just-bg-color">
+    <h2 class="calculator-title-big inverse-colors">Calculate date difference</h2>
+    <div class="calculator-inputs">
+
+      <h3 class="calculator-title-small just-font-color">Type-in days</h3>
+      <div class="calculator-days">
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="day1"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div>
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="day2"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div>
+      </div>
+
+      <h3 class="calculator-title-small just-font-color">Type-in months</h3>
+      <div class="calculator-months">
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="month1"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div> 
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="month2"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div>
+      </div>
+
+      <h3 class="calculator-title-small just-font-color">Type-in years</h3>
+      <div class="calculator-years">
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="year1"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div>
+        <div class='ctrl'>
+          <div class='ctrl__button decrement inverse-colors' onclick="decrement()">&ndash;</div>
+          <div class='ctrl__counter-num normal-colors' id="year2"></div>
+          <div class='ctrl__button increment inverse-colors' onclick="increment()">+</div>
+        </div>
+      </div>
+
+      <img height="75px" width="75px" src="/images/pc-button.png" id="count-btn" onclick="count()">
+
+      <div id="resField" class="calculator-response just-font-color"> </div>
+
+    </div>
+    <div class="calculator-colors" id="change-color-icon" onclick="changeColor()">
+        <img src="/images/paint.svg" width="20px" height="20px">
+    </div>
+    <div class="calculator-footer inverse-colors">©2020, devmello</div>
+  </div>
+
+
+
+  <th:block layout:fragment="script">
+  	<script th:src="@{/js/calc.js}"></script>
+  </th:block>
+
+</body>
+</html>
